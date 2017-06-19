@@ -8,7 +8,7 @@ Basically it's a PvP card game with two teams combatting each other. The very in
 
 [Rules and Intro (In Chinese, would follow up with translation when I have the time)](http://baike.baidu.com/item/星杯传说)
 
-I have not settled on what languages to use. Ideally it should be a multiplayer web app. (probably java/python, I am leaning toward python for simplicity and the fact this project should be pretty small)
+I have not settled on what languages to use. Ideally it should be a multiplayer web app. (probably java/python, I am leaning towards python for simplicity and the fact this project should be pretty small) I would be happy enough to get a hot-seat version done for now.
 
 ### Architecture
 As the full game is really complicated, the following breakdown is based on a simplified version.
@@ -142,10 +142,10 @@ end
 
 ##### Flow
 
-1. Gen player objs
+1. Gen player objs, card objs and shuffle them into deck
 2. Randonize player teams
 3. Randomnize player orders(positions)
-4. for each player: show 3 chars to pick and attach char to player
+4. for each player: show 3 chars to pick and attach char to player, then feed 4 cards to hand
 5. for each player: run his round
 
 ##### Also needs to handle:
@@ -166,7 +166,7 @@ Trying to mock the experience one has playing offline. so one should probably ca
 
 2. His hand of cards
 
-3. Everyone's `statusBar`, `char`, `energyPool`, `, anySpecial char's `, `indicators/special_tokens`, `# cards on hand`
+3. Everyone's `statusBar`, `char`, `energyPool`, `anySpecial char's indicators/special_tokens`, `# cards on hand`
 
    Basically a table displaying everyone else's stats
 
