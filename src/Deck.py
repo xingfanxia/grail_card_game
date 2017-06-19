@@ -59,7 +59,7 @@ class Deck():
         self.deck.extend(booms_3)
         booms_4 = [Card.Magic_Card("elec", "boom") for i in range(2)]
         self.deck.extend(booms_4)
-        
+
     def draw(self):
         return self.deck.pop()
 
@@ -73,5 +73,6 @@ if __name__ == '__main__':
     for item in myDeck.deck:
         print(item.descriptor())
 
-    print("I am drawing" + myDeck.draw().descriptor())
+    for i in range(4):
+        print("I am drawing" + myDeck.draw().descriptor())
     print("remainning cards" + str(len(myDeck.deck)))
